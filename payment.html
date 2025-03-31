@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Enrollment | AI Ethics Institute</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body { font-family: 'Open Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+        .preview-video { 
+            aspect-ratio: 16/9;
+            background: #000;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">AI Ethics<span class="text-blue-400">Institute</span></a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-blue-400">Home</a>
+                <a href="about.html" class="hover:text-blue-400">About</a>
+                <a href="courses.html" class="hover:text-blue-400">Courses</a>
+                <a href="ethics.html" class="hover:text-blue-400">Ethics</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-6 py-12">
+        <div class="max-w-4xl mx-auto">
+            <!-- Course Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4">Enroll in <span id="course-title" class="text-blue-600">Course Name</span></h1>
+                <p class="text-xl text-gray-600">Complete your enrollment to access this premium course</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Payment Form -->
+                <div>
+                    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                        <h2 class="text-2xl font-bold mb-4">Payment Information</h2>
+                        <form id="payment-form">
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2">Full Name</label>
+                                <input type="text" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500" required>
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-3">Payment Method</label>
+                                <div class="space-y-3">
+                                    <div class="flex items-center">
+                                        <input type="radio" id="paypal" name="payment" value="paypal" class="mr-2" checked>
+                                        <label for="paypal" class="flex items-center">
+                                            <i class="fab fa-paypal text-blue-500 text-2xl mr-2"></i>
+                                            <span>PayPal</span>
+                                        </label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="radio" id="card" name="payment" value="card" class="mr-2">
+                                        <label for="card" class="flex items-center">
+                                            <i class="far fa-credit-card text-gray-500 text-xl mr-2"></i>
+                                            <span>Credit/Debit Card</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="card-fields" class="hidden">
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 mb-2">Card Information</label>
+                                    <div class="border rounded-lg p-2">
+                                        <div class="flex mb-2">
+                                            <input type="text" placeholder="Card number" class="flex-1 px-2 py-1 focus:outline-none">
+                                            <span class="flex items-center px-2">
+                                                <i class="fab fa-cc-visa text-blue-600 mr-2"></i>
+                                                <i class="fab fa-cc-mastercard text-red-600"></i>
+                                            </span>
+                                        </div>
+                                        <div class="flex">
+                                            <input type="text" placeholder="MM/YY" class="w-1/2 px-2 py-1 border-r focus:outline-none">
+                                            <input type="text" placeholder="CVV" class="w-1/2 px-2 py-1 focus:outline-none">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="rounded text-blue-600 mr-2" required>
+                                    <span class="text-gray-700">I agree to the <a href="#" class="text-blue-600">Terms of Service</a></span>
+                                </label>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-bold transition duration-300">
+                                Pay <span id="course-price">$99</span> with PayPal
+                            </button>
+                            <div class="text-center mt-4 text-sm text-gray-500">
+                                You'll be redirected to PayPal to complete your payment
+                            </div>
+                        </form>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-3">What's included:</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Full course access (lifetime)</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Downloadable resources</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Certificate of completion</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Private discussion community</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Course Preview -->
+                <div>
+                    <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                        <h2 class="text-2xl font-bold mb-4">Course Preview</h2>
+                        <div class="preview-video mb-4 rounded-lg overflow-hidden">
+                            <!-- Placeholder for course preview video -->
+                            <div class="h-full flex items-center justify-center text-white">
+                                <div class="text-center">
+                                    <i class="fas fa-play-circle text-5xl mb-2"></i>
+                                    <p>Course Preview Video</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2" id="preview-title">Course Title</h3>
+                        <p class="text-gray-700 mb-4" id="preview-desc">Course description will appear here with detailed information about what students will learn.</p>
+                        <div class="border-t pt-4">
+                            <h4 class="font-semibold mb-2">Preview Content:</h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <i class="fas fa-play text-blue-500 mr-2 text-sm"></i>
+                                    <span>Introduction to Course (3:25)</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-play text-blue-500 mr-2 text-sm"></i>
+                                    <span>Key Concepts Overview (5:42)</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-file-alt text-blue-500 mr-2 text-sm"></i>
+                                    <span>Downloadable Syllabus</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-3">Need help deciding?</h3>
+                        <p class="text-gray-700 mb-4">Contact our admissions team to discuss which course is right for you.</p>
+                        <a href="mailto:admissions@aiethics.edu" class="inline-block bg-white hover:bg-gray-100 text-blue-600 px-4 py-2 rounded-lg font-semibold transition duration-300">
+                            <i class="fas fa-envelope mr-2"></i> Contact Admissions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">AI Ethics Institute</h3>
+                    <p>Advancing responsible artificial intelligence through education and research.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
+                        <li><a href="about.html" class="hover:text-blue-400">About</a></li>
+                        <li><a href="courses.html" class="hover:text-blue-400">Courses</a></li>
+                        <li><a href="ethics.html" class="hover:text-blue-400">Ethics</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li><i class="fas fa-envelope mr-2"></i> contact@aiethics.edu</li>
+                        <li><i class="fas fa-phone mr-2"></i> +1 (555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2023 AI Ethics Institute. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Payment method toggle
+                const paymentMethods = document.querySelectorAll('input[name="payment"]');
+                const cardFields = document.getElementById('card-fields');
+                const submitButton = document.querySelector('button[type="submit"]');
+                
+                paymentMethods.forEach(method => {
+                    method.addEventListener('change', function() {
+                        if (this.value === 'card') {
+                            cardFields.classList.remove('hidden');
+                            submitButton.textContent = `Pay ${document.getElementById('course-price').textContent} with Card`;
+                        } else {
+                            cardFields.classList.add('hidden');
+                            submitButton.textContent = `Pay ${document.getElementById('course-price').textContent} with PayPal`;
+                        }
+                    });
+                });
+
+                // Handle form submission
+                document.getElementById('payment-form').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const paymentMethod = document.querySelector('input[name="payment"]:checked').value;
+                    
+                    if (paymentMethod === 'paypal') {
+                        // Redirect to PayPal with course details
+                        const course = new URLSearchParams(window.location.search).get('course');
+                        const price = document.getElementById('course-price').textContent.replace('$', '');
+                        // In production, this would verify payment success first
+                        window.location.href = `course-viewer.html?course=${encodeURIComponent(course)}`;
+                    } else {
+                        // Process card payment (would be handled by Stripe/Payment processor in production)
+                        alert('Card payment processing would be implemented here');
+                    }
+                });
+
+                // Course details from URL parameters
+                const urlParams = new URLSearchParams(window.location.search);
+                const course = urlParams.get('course');
+            
+            // In a real implementation, you would fetch course details from a database
+            const courses = {
+                'fundamentals': {
+                    title: 'Ethical AI Fundamentals',
+                    price: '$99',
+                    desc: 'This comprehensive course covers the core principles of ethical AI design and implementation. You\'ll learn foundational concepts, practical frameworks, and real-world applications to ensure your AI systems align with ethical standards.'
+                },
+                'bias': {
+                    title: 'AI Bias Mitigation',
+                    price: '$149',
+                    desc: 'Master techniques to identify, measure, and mitigate bias in machine learning models. This hands-on course provides tools and methodologies to create fairer AI systems across various applications.'
+                },
+                'healthcare': {
+                    title: 'AI in Healthcare Ethics',
+                    price: '$199',
+                    desc: 'Explore the unique ethical challenges in healthcare AI applications. Learn to navigate patient privacy, algorithmic transparency, and accountability in life-critical decision support systems.'
+                },
+                'governance': {
+                    title: 'AI Governance for Leaders',
+                    price: '$249',
+                    desc: 'Develop strategic policies and governance frameworks for responsible AI adoption in your organization. This executive-level course covers risk management, compliance, and ethical leadership in AI.'
+                },
+                'privacy': {
+                    title: 'AI & Privacy Law',
+                    price: '$129',
+                    desc: 'Understand global privacy regulations (GDPR, CCPA) and their implications for AI systems. Learn practical approaches to data protection, consent management, and privacy-preserving AI techniques.'
+                }
+            };
+
+            const courseData = courses[course] || courses['fundamentals'];
+            
+            document.getElementById('course-title').textContent = courseData.title;
+            document.getElementById('course-price').textContent = courseData.price;
+            document.getElementById('preview-title').textContent = courseData.title;
+            document.getElementById('preview-desc').textContent = courseData.desc;
+        });
+    </script>
+</body>
+</html>
