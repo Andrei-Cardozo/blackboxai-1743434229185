@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Viewer | AI Ethics Institute</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .lesson-content {
+            max-width: 800px;
+            line-height: 1.8;
+        }
+        .lesson-content h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 1.5rem 0 1rem;
+        }
+        .lesson-content p {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">AI Ethics<span class="text-blue-400">Institute</span></a>
+            <div class="flex items-center space-x-4">
+                <button id="font-increase" class="p-2 rounded-full hover:bg-gray-700">
+                    <i class="fas fa-text-height"></i>
+                </button>
+                <button id="dark-mode" class="p-2 rounded-full hover:bg-gray-700">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Course Content -->
+    <div class="container mx-auto px-6 py-8 flex">
+        <!-- Sidebar -->
+        <div class="w-1/4 pr-8 hidden md:block">
+            <div class="bg-white rounded-lg shadow-md p-4 sticky top-20">
+                <h3 class="text-lg font-semibold mb-4">Course Modules</h3>
+                <ul class="space-y-2">
+                    <li><a href="#module1" class="text-blue-600 hover:underline">Introduction to AI Ethics</a></li>
+                    <li><a href="#module2" class="text-gray-600 hover:underline">Bias in Algorithms</a></li>
+                    <li><a href="#module3" class="text-gray-600 hover:underline">Privacy Concerns</a></li>
+                    <li><a href="#module4" class="text-gray-600 hover:underline">Case Studies</a></li>
+                </ul>
+                <div class="mt-6 pt-4 border-t">
+                    <a href="#" class="block bg-blue-600 hover:bg-blue-700 text-white text-center py-2 rounded-lg">
+                        Download Materials
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1">
+            <div class="bg-white rounded-lg shadow-md p-8 lesson-content" id="lesson-content">
+                <h1 class="text-3xl font-bold mb-6" id="course-title">Ethical AI Fundamentals</h1>
+                
+                <div id="module1" class="module">
+                    <h2 class="text-2xl font-semibold mb-4">1. Introduction to AI Ethics</h2>
+                    <p class="mb-4">Artificial Intelligence is transforming our world, but with great power comes great responsibility. This module explores:</p>
+                    
+                    <ul class="list-disc pl-6 mb-6 space-y-2">
+                        <li>The fundamental principles of ethical AI</li>
+                        <li>Historical context of AI ethics</li>
+                        <li>Key ethical frameworks</li>
+                        <li>Real-world case studies</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold mb-3 mt-6">Core Principles</h3>
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-blue-800 mb-2">Transparency</h4>
+                            <p>AI systems should be explainable and their decision-making processes understandable to users.</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-blue-800 mb-2">Accountability</h4>
+                            <p>Clear responsibility must be established for AI system outcomes and decisions.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-xl font-semibold mb-3">Case Study: Algorithmic Bias</h3>
+                    <div class="bg-gray-50 p-4 rounded-lg mb-6">
+                        <p class="mb-3">A 2023 study revealed significant racial bias in facial recognition systems:</p>
+                        <ul class="list-disc pl-6 space-y-1">
+                            <li>Error rates up to 35% higher for darker-skinned women</li>
+                            <li>Only 1% accuracy improvement since 2018</li>
+                            <li>Industry-wide standards still lacking</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-lightbulb text-yellow-500 mt-1 mr-3"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Key Takeaway</h4>
+                                <p>Ethical AI requires diverse development teams and rigorous testing across demographic groups.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 flex justify-between border-t pt-6">
+                    <button class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-lg">
+                        <i class="fas fa-arrow-left mr-2"></i> Previous
+                    </button>
+                    <button id="complete-course" class="hidden bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg font-semibold">
+                        <i class="fas fa-certificate mr-2"></i> Complete Course
+                    </button>
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
+                        Next <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+
+                <!-- Certificate Modal -->
+                <div id="certificate-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+                    <div class="bg-white rounded-lg shadow-xl p-8 max-w-2xl w-full">
+                        <div class="text-center border-b-2 border-gold-500 pb-4 mb-6">
+                            <h2 class="text-3xl font-bold text-gray-800">Certificate of Completion</h2>
+                            <p class="text-gray-600">Presented to</p>
+                            <h3 class="text-2xl font-semibold mt-2" id="student-name">[Your Name]</h3>
+                        </div>
+                        <div class="text-center mb-6">
+                            <p class="text-lg">Has successfully completed the course</p>
+                            <h4 class="text-xl font-semibold mt-2" id="cert-course-title">Ethical AI Fundamentals</h4>
+                            <p class="text-gray-600 mt-2">on <span id="completion-date">[Date]</span></p>
+                        </div>
+                        <div class="flex justify-between items-center mt-6">
+                            <div class="text-center">
+                                <div class="h-20 w-32 border-t-2 border-gray-300 mx-auto"></div>
+                                <p class="text-sm mt-2">Instructor Signature</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="h-20 w-32 border-t-2 border-gray-300 mx-auto"></div>
+                                <p class="text-sm mt-2">AI Ethics Institute</p>
+                            </div>
+                        </div>
+                        <div class="mt-8 flex justify-center">
+                            <button id="download-cert" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg mr-4">
+                                <i class="fas fa-download mr-2"></i> Download
+                            </button>
+                            <button id="close-cert" class="bg-gray-200 hover:bg-gray-300 px-6 py-2 rounded-lg">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Track reading progress
+                const modules = document.querySelectorAll('.module');
+                const progress = {
+                    completed: 0,
+                    total: modules.length
+                };
+
+                // Create progress bar
+                const progressBar = document.createElement('div');
+                progressBar.className = 'fixed top-16 left-0 right-0 h-1 bg-gray-200 z-40';
+                progressBar.innerHTML = `
+                    <div class="h-full bg-blue-600 transition-all duration-300" style="width: 0%"></div>
+                `;
+                document.body.prepend(progressBar);
+
+                // Update progress when module is viewed
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            progress.completed++;
+                            const percentage = Math.min(100, Math.round((progress.completed / progress.total) * 100));
+                            progressBar.querySelector('div').style.width = `${percentage}%`;
+                            
+                            // Mark module as read
+                            entry.target.classList.add('read');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                // Observe all modules
+                modules.forEach(module => {
+                    observer.observe(module);
+                });
+            // Get course from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const course = urlParams.get('course');
+            
+            // Font size controls
+            const content = document.getElementById('lesson-content');
+            const fontIncrease = document.getElementById('font-increase');
+            let fontSize = 1;
+            
+            fontIncrease.addEventListener('click', function() {
+                fontSize += 0.1;
+                content.style.fontSize = `${fontSize}rem`;
+            });
+
+            // Dark mode toggle
+            const darkMode = document.getElementById('dark-mode');
+            darkMode.addEventListener('click', function() {
+                document.body.classList.toggle('bg-gray-900');
+                document.body.classList.toggle('text-white');
+                content.classList.toggle('bg-gray-800');
+                content.classList.toggle('text-gray-200');
+            });
+
+            // Load course content based on URL parameter
+            // In a real implementation, this would fetch from a database
+            const courses = {
+                'fundamentals': {
+                    title: 'Ethical AI Fundamentals',
+                    content: '<h2>1. Introduction to AI Ethics</h2><p>Detailed content would be loaded here...</p>'
+                },
+                // Other courses would be defined here
+            };
+            
+            if (course && courses[course]) {
+                document.getElementById('course-title').textContent = courses[course].title;
+                document.getElementById('cert-course-title').textContent = courses[course].title;
+            }
+
+            // Show complete button when all modules are read
+            const completeBtn = document.getElementById('complete-course');
+            const checkCompletion = () => {
+                if (progress.completed >= progress.total) {
+                    completeBtn.classList.remove('hidden');
+                }
+            };
+
+            // Certificate functionality
+            const certModal = document.getElementById('certificate-modal');
+            const closeCert = document.getElementById('close-cert');
+            const downloadCert = document.getElementById('download-cert');
+            
+            completeBtn.addEventListener('click', () => {
+                const today = new Date();
+                document.getElementById('completion-date').textContent = today.toLocaleDateString();
+                certModal.classList.remove('hidden');
+            });
+
+            closeCert.addEventListener('click', () => {
+                certModal.classList.add('hidden');
+            });
+
+            downloadCert.addEventListener('click', () => {
+                // In a real implementation, this would generate a PDF certificate
+                alert('Certificate download functionality would be implemented here');
+            });
+
+            // Check completion on initial load
+            checkCompletion();
+        });
+    </script>
+</body>
+</html>
