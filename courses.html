@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Ethics Courses | AI Ethics Institute</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .course-card {
+            transition: all 0.3s ease;
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .popular-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: #f59e0b;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    </style>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">AI Ethics<span class="text-blue-400">Institute</span></a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-blue-400">Home</a>
+                <a href="about.html" class="hover:text-blue-400">About</a>
+                <a href="courses.html" class="text-blue-400 font-semibold">Courses</a>
+                <a href="ethics.html" class="hover:text-blue-400">Ethics</a>
+            </div>
+            <button class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">AI Ethics Courses</h1>
+            <p class="text-xl max-w-3xl mx-auto">Professional training programs to help you navigate the complex ethical landscape of artificial intelligence</p>
+        </div>
+    </header>
+
+    <!-- Top Ad Banner -->
+    <div class="container mx-auto px-6 py-6">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+             data-ad-slot="1234567893"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <!-- Courses Section -->
+    <section class="container mx-auto px-6 py-12">
+        <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800">Available Courses</h2>
+            <div class="mt-4 md:mt-0">
+                <label for="filter" class="mr-2 text-gray-700">Filter by:</label>
+                <select id="filter" class="border border-gray-300 rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option>All Courses</option>
+                    <option>Beginner</option>
+                    <option>Intermediate</option>
+                    <option>Advanced</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Course 1 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md course-card relative">
+                <div class="popular-badge">MOST POPULAR</div>
+                <img src="https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg" alt="Ethical AI Fundamentals" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold">Ethical AI Fundamentals</h3>
+                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Beginner</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Learn the core principles of ethical AI design and implementation.</p>
+                    <div class="flex items-center text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="text-gray-600 text-sm ml-2">(142 reviews)</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-2xl font-bold text-gray-800">$99</span>
+                            <span class="text-gray-500 line-through ml-2">$149</span>
+                        </div>
+                        <a href="payment.html?course=fundamentals" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition duration-300">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 2 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md course-card">
+                <img src="https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg" alt="AI Bias Mitigation" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold">AI Bias Mitigation</h3>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Intermediate</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Strategies to identify and reduce bias in machine learning models.</p>
+                    <div class="flex items-center text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span class="text-gray-600 text-sm ml-2">(87 reviews)</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-2xl font-bold text-gray-800">$149</span>
+                        </div>
+                        <a href="payment.html?course=bias" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition duration-300">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 3 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md course-card">
+                <img src="https://images.pexels.com/photos/8386365/pexels-photo-8386365.jpeg" alt="AI in Healthcare Ethics" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold">AI in Healthcare Ethics</h3>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Advanced</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Ethical challenges in AI-driven healthcare systems and solutions.</p>
+                    <div class="flex items-center text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span class="text-gray-600 text-sm ml-2">(64 reviews)</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-2xl font-bold text-gray-800">$199</span>
+                        </div>
+                        <a href="payment.html?course=healthcare" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition duration-300">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 4 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md course-card">
+                <img src="https://images.pexels.com/photos/8386425/pexels-photo-8386425.jpeg" alt="AI Governance for Leaders" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold">AI Governance for Leaders</h3>
+                        <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Intermediate</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Policy frameworks for responsible enterprise AI adoption.</p>
+                    <div class="flex items-center text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="text-gray-600 text-sm ml-2">(53 reviews)</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-2xl font-bold text-gray-800">$249</span>
+                        </div>
+                        <a href="payment.html?course=governance" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition duration-300">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course 5 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md course-card">
+                <img src="https://images.pexels.com/photos/8386366/pexels-photo-8386366.jpeg" alt="AI & Privacy Law" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-semibold">AI & Privacy Law</h3>
+                        <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Intermediate</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Navigating GDPR and other regulations for AI systems.</p>
+                    <div class="flex items-center text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span class="text-gray-600 text-sm ml-2">(41 reviews)</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <span class="text-2xl font-bold text-gray-800">$129</span>
+                            <span class="text-gray-500 line-through ml-2">$179</span>
+                        </div>
+                        <a href="payment.html?course=privacy" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition duration-300">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coming Soon Placeholder -->
+            <div class="bg-gray-100 rounded-lg overflow-hidden shadow-md flex items-center justify-center">
+                <div class="p-6 text-center">
+                    <div class="text-gray-400 mb-4">
+                        <i class="fas fa-plus-circle text-5xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-600 mb-2">New Course Coming Soon</h3>
+                    <p class="text-gray-500 mb-4">We're developing more courses to help you master AI ethics.</p>
+                    <button class="bg-gray-200 hover:bg-gray-300 text-gray-700 px-4 py-2 rounded-lg text-sm font-semibold transition duration-300">Notify Me</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mid-Page Ad -->
+    <div class="bg-gray-100 py-8">
+        <div class="container mx-auto px-6">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                 data-ad-slot="1234567894"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <section class="container mx-auto px-6 py-12">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">What Our Students Say</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="flex items-center mb-4">
+                    <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Student" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <h4 class="font-semibold">Sarah Johnson</h4>
+                        <p class="text-gray-600 text-sm">AI Ethics Fundamentals</p>
+                    </div>
+                </div>
+                <p class="text-gray-700">"This course completely changed how I approach AI development. The ethical frameworks are practical and immediately applicable to my work."</p>
+                <div class="flex mt-3 text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="flex items-center mb-4">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Student" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <h4 class="font-semibold">Michael Chen</h4>
+                        <p class="text-gray-600 text-sm">AI Bias Mitigation</p>
+                    </div>
+                </div>
+                <p class="text-gray-700">"The bias detection techniques I learned helped us identify issues in our recommendation algorithms we never would have spotted otherwise."</p>
+                <div class="flex mt-3 text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="flex items-center mb-4">
+                    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Student" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <h4 class="font-semibold">Priya Patel</h4>
+                        <p class="text-gray-600 text-sm">AI Governance</p>
+                    </div>
+                </div>
+                <p class="text-gray-700">"As a policy maker, this gave me the technical foundation I needed to draft effective AI regulations for our city."</p>
+                <div class="flex mt-3 text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-blue-700 text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Master AI Ethics?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Join thousands of professionals who are building responsible AI systems with our comprehensive courses.</p>
+            <a href="#" class="bg-white hover:bg-gray-100 text-blue-700 px-8 py-4 rounded-lg text-lg font-semibold transition duration-300 inline-block">Browse All Courses</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">AI Ethics Institute</h3>
+                    <p>Advancing responsible artificial intelligence through education and research.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
+                        <li><a href="about.html" class="hover:text-blue-400">About</a></li>
+                        <li><a href="courses.html" class="hover:text-blue-400">Courses</a></li>
+                        <li><a href="ethics.html" class="hover:text-blue-400">Ethics</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li><i class="fas fa-envelope mr-2"></i> contact@aiethics.edu</li>
+                        <li><i class="fas fa-phone mr-2"></i> +1 (555) 123-4567</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-blue-400"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-blue-400"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-blue-400"><i class="fab fa-youtube text-xl"></i></a>
+                    </div>
+                    <!-- Footer Ad Slot -->
+                    <div class="mt-4">
+                        <ins class="adsbygoogle"
+                             style="display:block"
+                             data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                             data-ad-slot="9876543212"
+                             data-ad-format="auto"
+                             data-full-width-responsive="true"></ins>
+                        <script>
+                             (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>&copy; 2023 AI Ethics Institute. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AdSense
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        });
+    </script>
+</body>
+</html>
